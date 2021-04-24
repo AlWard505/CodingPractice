@@ -8,6 +8,8 @@ namespace _02_Varibles
         {
             string varible1 = "howdie planet";
             Console.WriteLine(varible1);
+            varible1 = Console.ReadLine();
+            Console.WriteLine(varible1);
         }
     }
 }
