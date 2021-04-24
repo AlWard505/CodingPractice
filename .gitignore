@@ -73,3 +73,9 @@ C#/Mathmatics/Mathmatics/obj/Debug/netcoreapp3.1/Mathmatics.AssemblyInfo.cs
 *.targets
 *.json
 *.cache
+*.exe
+*.sln
+*.v2
+C#/03-Mathmatics/Mathmatics/obj/Debug/netcoreapp3.1/Mathmatics.AssemblyInfo.cs
+C#/03-Mathmatics/Mathmatics/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs
+C#/03-Mathmatics/.vs/Mathmatics/v16/.suo
