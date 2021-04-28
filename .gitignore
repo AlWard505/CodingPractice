@@ -76,7 +76,7 @@ C#/Mathmatics/Mathmatics/obj/Debug/netcoreapp3.1/Mathmatics.AssemblyInfo.cs
 *.exe
 *.sln
 *.v2
-*suo
+*.suo
 *.AssemblyInfo.cs
 *.AssemblyAttributes.cs
 C#/03-Mathmatics/Mathmatics/obj/Debug/netcoreapp3.1/Mathmatics.AssemblyInfo.cs
