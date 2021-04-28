@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _04_Statments
+namespace _04_StamentsAndLoops
 {
     class Program
     {
@@ -11,6 +11,7 @@ namespace _04_Statments
             {
                 Console.WriteLine("it worked");
             }
+            word = Console.ReadLine();
             while (word != "Key")
             {
                 word = Console.ReadLine();
