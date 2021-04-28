@@ -11,8 +11,6 @@ namespace _06_Arrays
             {
                 Console.WriteLine(Names[i]);
             }
-
-            
         }
     }
 }
