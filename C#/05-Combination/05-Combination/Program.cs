@@ -50,6 +50,10 @@ namespace _05_Combination
                 {
                     Console.WriteLine("Enter '*' to multiply two values\nEnter '/' to divide two values\nEnter '-' to subtract one value from another\nEnter '+' to add two values\nEnter '?' to get this message again\nEnter 'End' to end the program");
                 }
+                else
+                {
+                    Console.WriteLine("please enter one of the options");
+                }
                 Entry = Console.ReadLine();
             }
         }
