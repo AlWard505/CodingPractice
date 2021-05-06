@@ -6,8 +6,11 @@ namespace _02_Varibles
     {
         static void Main(string[] args)
         {
-            string varible1 = "howdie planet";
+            //defines a varible
+            string varible1 = "howdie planet";            
             Console.WriteLine(varible1);
+
+            //changes varible to input
             varible1 = Console.ReadLine();
             Console.WriteLine(varible1);
         }

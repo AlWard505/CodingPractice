@@ -10,11 +10,13 @@ namespace _09_BreakAndContinue
             {
                 if (i == 2)
                 {
+                    //this pauses the code for this one loop
                     continue;
                 }
 
                 if (i == 8)
                 {
+                    //this stops the loop entirely
                     break;
                 }
                 Console.WriteLine(i);
