@@ -10,13 +10,12 @@ namespace _10_Classes
             {
                 var account = new bankaccount(Console.ReadLine(), 1000);
                 Console.WriteLine($"Account {account.number} was created for {account.owner} with {account.balance} initial balance.");
-
             }
         }
     }
     public class bankaccount
     {
-        private static int accountNumberSeed = 1234567890;
+        private static int accountNumberSeed = 00000000;
         public string number { get; }
         public string owner { get; set; }
         public decimal balance { get; }
