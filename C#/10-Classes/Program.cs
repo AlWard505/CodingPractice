@@ -15,7 +15,7 @@ namespace _10_Classes
     }
     public class bankaccount
     {
-        private static int accountNumberSeed = 00000000;
+        private static int accountNumberSeed = 11111111;
         public string number { get; }
         public string owner { get; set; }
         public decimal balance { get; }
@@ -34,6 +34,18 @@ namespace _10_Classes
         public void withdrawl(decimal amount, DateTime date, string note)
         {
 
+        }
+    }
+    public class Transaction
+    {
+        public decimal amount { get; }
+        public DateTime date { get; }
+        public string notes { get; }
+        public Transaction(decimal amount, DateTime date, string notes)
+        {
+            this.amount = amount;
+            this.date = date;
+            this.notes = notes;
         }
     }
 }
