@@ -15,9 +15,12 @@ namespace _10_Classes
             Console.WriteLine(account.balance);
         }
     }
+    //defines the class
     public class bankaccount
     {
+        //creates a account number that stays static across all versions of this class
         private static int accountNumberSeed = 11111111;
+        //creates properties of the class
         public string number { get; }
         public string owner { get; set; }
         public decimal balance 
@@ -34,6 +37,8 @@ namespace _10_Classes
         }
 
         private List<Transaction> allTransactions = new List<Transaction>();
+        //defines a function that run when a new class is created
+        //called the constructor
         public bankaccount(string name, decimal initialbalance)
         {
             this.owner = name;
