@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+//using this tutorial https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/intro-to-csharp/introduction-to-classes
 namespace _10_Classes
 {
     class Program
