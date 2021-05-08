@@ -19,6 +19,7 @@ namespace _10_Classes
     public class bankaccount
     {
         //creates a account number that stays static across all versions of this class
+        //a static is a constant
         private static int accountNumberSeed = 11111111;
         //creates properties of the class
         public string number { get; }
