@@ -7,9 +7,12 @@ namespace _11_Classes2
         static void Main(string[] args)
         {
             var enemys = new Enemy();
-            Console.WriteLine(enemys);
-            enemys = new Enemy();
-            Console.WriteLine(enemys);
+            Console.WriteLine(enemys.Health);
+            while (true)
+            {
+                Console.WriteLine("enter damage");
+                enemys.damage(int.Parse(Console.ReadLine()));
+            }
         }
     }
     class Enemy
@@ -21,7 +24,7 @@ namespace _11_Classes2
                 int health = 0;
                 foreach(var list in Damage)
                 {
-                    health += list;
+                    health += -list;
                 }
                 return health;
             }
@@ -36,6 +39,10 @@ namespace _11_Classes2
         public void damage(int DamageTaken)
         {
             Damage.Add(DamageTaken);
+            if (Health <= 0)
+            {
+                Console.WriteLine("the enemy is dead");
+            }
         }
     }
 
