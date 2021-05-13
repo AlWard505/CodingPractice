@@ -6,12 +6,26 @@ namespace _11_Classes2
     {
         static void Main(string[] args)
         {
-            var enemys = new Enemy();
-            Console.WriteLine(enemys.Health);
+            List<Enemy> enemies = new List<Enemy>();
+            Console.WriteLine("how many enemies");
+            int quantity = int.Parse(Console.ReadLine());
+            for (int z = 0; z< quantity; z++)
+            {
+                enemies.Add(new Enemy());
+            }
             while (true)
             {
-                Console.WriteLine("enter damage");
-                enemys.damage(int.Parse(Console.ReadLine()));
+                Console.WriteLine("ehich enemy do you want to damage");
+                int x = 0;
+                foreach(var enemy in enemies)
+                {
+                    
+                    Console.WriteLine("enemy"+ Convert.ToString(x));
+                    Console.WriteLine("health: " + enemy.Health);
+                    x += 1;
+                }
+                int attacked = int.Parse(Console.ReadLine());
+                enemies[attacked].damage(int.Parse(Console.ReadLine()));
             }
         }
     }
