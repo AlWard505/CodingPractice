@@ -58,7 +58,8 @@ namespace _11_Classes2
 
         public Enemy()
         {
-            Damage.Add(-10);
+            Random rnd = new Random();
+            Damage.Add(-(rnd.Next(8,13)));
         }
 
         public void damage(int DamageTaken)
