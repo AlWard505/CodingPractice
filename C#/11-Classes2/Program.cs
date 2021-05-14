@@ -11,7 +11,7 @@ namespace _11_Classes2
             int quantity = int.Parse(Console.ReadLine());
             for (int z = 0; z< quantity; z++)
             {
-                Console.WriteLine("enter difficult for enemy " + Convert.ToInt32(z)+1 + "\ne is easy\nm is medium\nh is hard");
+                Console.WriteLine("enter difficult for enemy " + Convert.ToInt32(z)+1 + "\ne is easy\nm is medium\nh is hard\nleave blank for random difficulty");
                 enemies.Add(new Enemy(Console.ReadLine()));
             }
             while (true)
@@ -59,19 +59,52 @@ namespace _11_Classes2
 
         public Enemy(string strength)
         {
-            Random rnd = new Random();
+            
             if (strength == "e")
             {
-                Damage.Add(-(rnd.Next(5, 11)));
+                Easy();
             }
             else if (strength == "m")
             {
-                Damage.Add(-(rnd.Next(9, 16)));
+                Medium();
             }
             else if (strength == "h")
             {
-                Damage.Add(-(rnd.Next(14, 20)));
+                Hard();
             }
+            else
+            {
+                Random randomdiff = new Random();
+                int diff = randomdiff.Next(1, 3);
+                if (diff == 1)
+                {
+                    Easy();
+                }
+                else if (diff == 2)
+                {
+                    Medium();
+                }
+                else if (diff == 3)
+                {
+                    Hard();
+                }
+
+            }
+        }
+        public void Easy()
+        {
+            Random rnd = new Random();
+            Damage.Add(-(rnd.Next(5, 11)));
+        }
+        public void Medium()
+        {
+            Random rnd = new Random();
+            Damage.Add(-(rnd.Next(9, 16)));
+        }
+        public void Hard()
+        {
+            Random rnd = new Random();
+            Damage.Add(-(rnd.Next(14, 20)));
         }
 
         public void damage(int DamageTaken)
