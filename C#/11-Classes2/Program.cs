@@ -62,15 +62,15 @@ namespace _11_Classes2
             Random rnd = new Random();
             if (strength == "e")
             {
-                Damage.Add(-(rnd.Next(5, 10)));
+                Damage.Add(-(rnd.Next(5, 11)));
             }
             else if (strength == "m")
             {
-                Damage.Add(-(rnd.Next(10, 15)));
+                Damage.Add(-(rnd.Next(9, 16)));
             }
             else if (strength == "h")
             {
-                Damage.Add(-(rnd.Next(15, 20)));
+                Damage.Add(-(rnd.Next(14, 20)));
             }
         }
 
