@@ -11,7 +11,7 @@ namespace _11_Classes2
             int quantity = int.Parse(Console.ReadLine());
             for (int z = 0; z< quantity; z++)
             {
-                Console.WriteLine("enter difficult for enemy " + z + "\ne is easy\nm is medium\nh is hard");
+                Console.WriteLine("enter difficult for enemy " + Convert.ToInt32(z)+1 + "\ne is easy\nm is medium\nh is hard");
                 enemies.Add(new Enemy(Console.ReadLine()));
             }
             while (true)
@@ -21,17 +21,17 @@ namespace _11_Classes2
                 foreach(var enemy in enemies)
                 {
                     
-                    Console.WriteLine("enemy "+ Convert.ToString(x));
+                    Console.WriteLine("enemy "+ Convert.ToString(x+1));
                     Console.WriteLine("health: " + enemy.Health);
                     x += 1;
                 }
                 int attacked = int.Parse(Console.ReadLine());
                 Console.WriteLine("how much damage");
-                enemies[attacked].damage(int.Parse(Console.ReadLine()));
-                if (enemies[attacked].Health <= 0)
+                enemies[attacked-1].damage(int.Parse(Console.ReadLine()));
+                if (enemies[attacked-1].Health <= 0)
                 {
                     Console.WriteLine("the enemy is dead");
-                    enemies.RemoveAt(attacked);
+                    enemies.RemoveAt(attacked-1);
                 }
                 if (enemies.Count == 0)
                 {
