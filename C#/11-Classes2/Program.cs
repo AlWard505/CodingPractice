@@ -11,7 +11,8 @@ namespace _11_Classes2
             int quantity = int.Parse(Console.ReadLine());
             for (int z = 0; z< quantity; z++)
             {
-                enemies.Add(new Enemy());
+                Console.WriteLine("enter difficult for enemy " + z + "\ne is easy\nm is medium\nh is hard");
+                enemies.Add(new Enemy(Console.ReadLine()));
             }
             while (true)
             {
@@ -56,10 +57,21 @@ namespace _11_Classes2
         }
         private List<int> Damage = new List<int>();
 
-        public Enemy()
+        public Enemy(string strength)
         {
             Random rnd = new Random();
-            Damage.Add(-(rnd.Next(8,13)));
+            if (strength == "e")
+            {
+                Damage.Add(-(rnd.Next(5, 10)));
+            }
+            else if (strength == "m")
+            {
+                Damage.Add(-(rnd.Next(10, 15)));
+            }
+            else if (strength == "h")
+            {
+                Damage.Add(-(rnd.Next(15, 20)));
+            }
         }
 
         public void damage(int DamageTaken)
