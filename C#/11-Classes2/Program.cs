@@ -43,6 +43,7 @@ namespace _11_Classes2
     }
     class Enemy
     {
+        // allows the health to change everytime Damage is added
         public int Health
         {
             get
@@ -59,6 +60,7 @@ namespace _11_Classes2
 
         public Enemy(string strength)
         {
+            //determines the strenght of the enemy
             
             if (strength == "e")
             {
@@ -72,6 +74,7 @@ namespace _11_Classes2
             {
                 Hard();
             }
+            //if none of the selected options are entered the code will choose a random one
             else
             {
                 Random randomdiff = new Random();
@@ -91,6 +94,7 @@ namespace _11_Classes2
 
             }
         }
+        // created these a fuctions rather than built into the set up code so when nothing is entered all of these options wont have to be put into the code
         public void Easy()
         {
             Random rnd = new Random();
@@ -110,7 +114,6 @@ namespace _11_Classes2
         public void damage(int DamageTaken)
         {
             Damage.Add(DamageTaken);
-            
         }
     }
 
