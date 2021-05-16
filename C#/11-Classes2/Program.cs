@@ -9,10 +9,26 @@ namespace _11_Classes2
             List<Enemy> enemies = new List<Enemy>();
             Console.WriteLine("how many enemies");
             int quantity = int.Parse(Console.ReadLine());
-            for (int z = 0; z< quantity; z++)
+            bool check = false;
+            string diff = "none";
+            for (int z = 1; z< quantity+1; z++)
             {
-                Console.WriteLine("enter difficult for enemy " + Convert.ToInt32(z)+1 + "\ne is easy\nm is medium\nh is hard\nleave blank for random difficulty");
-                enemies.Add(new Enemy(Console.ReadLine()));
+                if(check == false)
+                {
+                    Console.WriteLine("enter difficult for enemy " + Convert.ToInt32(z) + "\ne is easy\nm is medium\nh is hard\nleave blank for random difficulty");
+                    diff = Console.ReadLine();
+                }
+                
+                if (diff == "e" || diff == "m" || diff == "h")
+                {
+                    enemies.Add(new Enemy(diff));
+                }
+                else
+                {
+                    check = true;
+                    enemies.Add(new Enemy(diff));
+                }
+                
             }
             while (true)
             {
