@@ -10,6 +10,7 @@ namespace _12_FileHandling
             string filename = Console.ReadLine()+".txt";
             Console.WriteLine("enter what you will add to the file");
             string content = Console.ReadLine();
+
             //checks to see if the file exists
             if (File.Exists(filename))
             {
@@ -28,6 +29,7 @@ namespace _12_FileHandling
 
             Console.WriteLine("press enter to delete");
             Console.ReadLine();
+
             //deletes the selected entry
             File.Delete(filename);
 
