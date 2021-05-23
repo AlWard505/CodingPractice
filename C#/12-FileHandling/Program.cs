@@ -26,12 +26,15 @@ namespace _12_FileHandling
 
             //reads the content of the file and then prints it out
             Console.WriteLine(File.ReadAllText(filename));
+            Console.WriteLine("type 'y' to delete the file");
+            string check = Console.ReadLine();
+            if (check == "y")
+            {
+                //deletes the selected entry
+                File.Delete(filename);
+            }
 
-            Console.WriteLine("press enter to delete");
-            Console.ReadLine();
-
-            //deletes the selected entry
-            File.Delete(filename);
+            
 
         }
     }
