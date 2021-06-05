@@ -36,5 +36,10 @@ namespace _13_apps
         {
             label1.Text = "welcome planet";
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            label1.Text = textBox1.Text;
+        }
     }
 }
