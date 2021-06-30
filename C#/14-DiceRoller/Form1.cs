@@ -104,7 +104,7 @@ namespace _14_DiceRoller
 
         private void D12_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void D12_Click_1(object sender, EventArgs e)
@@ -131,10 +131,12 @@ namespace _14_DiceRoller
         {
             for (int i = 1; i <= Convert.ToInt32(numericUpDown8.Value); i++)
             {
-                roll += rollD4.Next(1, Convert.ToInt32(numericUpDown7.Value)+1);
+                roll += rollD4.Next(1, Convert.ToInt32(numericUpDown7.Value) + 1);
             }
             label9.Text = ("You rolled a " + roll);
             roll = 0;
         }
+
+
     }
 }
