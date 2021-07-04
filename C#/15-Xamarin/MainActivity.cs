@@ -32,7 +32,7 @@ namespace _15_Xamarin
             Android.Widget.TextView textview = FindViewById<Android.Widget.TextView>(Resource.Id.TimesClicked);
             button.Click += delegate {
                 clicks += 1;
-                textview.Text = "clicks: " + clicks;
+                textview.Text = "Clicks: " + clicks;
             };
             
         }

@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="59.0dp"
         android:layout_centerInParent="false"
-        android:text="clicks: 0"
+        android:text= "@string/initialText"
         android:foregroundGravity="center"
         android:gravity="center" />
     <Button
