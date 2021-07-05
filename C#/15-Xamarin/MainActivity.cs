@@ -13,7 +13,9 @@ namespace _15_Xamarin
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
-        public int clicks = 0;
+        public float clicks = 0;
+        public float clickpower = 1;
+        public float upgradecost = 10;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -30,9 +32,21 @@ namespace _15_Xamarin
             SetContentView(Resource.Layout.content_main);
             Android.Widget.Button button = FindViewById<Android.Widget.Button>(Resource.Id.MyButton);
             Android.Widget.TextView textview = FindViewById<Android.Widget.TextView>(Resource.Id.TimesClicked);
+            Android.Widget.Button Upgradebutton = FindViewById<Android.Widget.Button>(Resource.Id.MyButton2);
             button.Click += delegate {
-                clicks += 1;
+                clicks += clickpower;
                 textview.Text = "Clicks: " + clicks;
+            };
+            Upgradebutton.Click += delegate
+            {
+                if (clicks >= upgradecost)
+                {
+                    clicks -= upgradecost;
+                    clickpower += clickpower;
+                    upgradecost = (float)(Math.Round((decimal)(upgradecost * 2.5f),0));
+                    Upgradebutton.Text = "Increase click power\nCost: " + upgradecost;
+                    textview.Text = "Clicks: " + clicks;
+                }
             };
             
         }
