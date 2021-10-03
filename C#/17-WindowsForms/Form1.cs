@@ -28,15 +28,15 @@ namespace _17_WindowsForms
             int height = 480;
 
             Bitmap bmp = new Bitmap(width, height);
+            Random RandomRGB = new Random();
             for (int x = 0; x < width; x++)
             {
                 for (int y = 0; y < height; y++)
                 {
-                    bmp.SetPixel(x, y, Color.FromArgb(255, 0,0,0));
-                    pictureBox1.Image = bmp;
+                    bmp.SetPixel(x, y, Color.FromArgb(255, RandomRGB.Next(0,255), RandomRGB.Next(0, 255), RandomRGB.Next(0, 255)));
                 }
             }
-            
+            pictureBox1.Image = bmp;
         }
     }
 }
